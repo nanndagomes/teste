@@ -52,6 +52,34 @@ main {
     background-color: rgb(255, 255, 255);
 }
 
+
+.botao-container {
+
+    margin-bottom: 30px;
+    text-align: center; /* Centraliza horizontalmente o botão */
+    margin-top: 10px /* Espaço entre o conteúdo principal e o botão (aumentado para 30px) */
+    
+
+}
+
+.botao-pagamento {
+    background-color: #820BD1;
+    color: #fff;
+    padding: 20px 60px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    font-size: 25px;
+    line-height: 1;
+    width: auto; /* Largura automática (ajustada pelo conteúdo) */
+}
+
+.botao-pagamento:hover {
+    background-color: #00D26A;
+}
+
 #texto1 {
     color: black;
     text-align: center;
@@ -136,38 +164,39 @@ p {
 
 #titulo2 {
 
-    text-align: center;
+text-align: center;
    color: #820BD1;
    margin: 20px;
-   font-size: 27px;
+   font-size: 35px;
 }
 
 #titulo3 {
 
     text-align: center;
-     margin-bottom: 30px;
+    margin-bottom: 30px;
     font-size: 27px;
     color:#820BD1 ;
 }
 
 ol {
 
+    text-decoration: none;
+    text-align: justify;
     line-height: 27px;
     font-size: 19px;
+    font-size: 19px;
     margin-top: 30px;
-    padding: 20px;
-    color: black;
+    padding: 35px;
+    color: #000000;
 
 }
 
-li {
-    text-decoration: underline;
-}
+
 
 ol a {
-    color: #000000;
+    color: #820BD1;
     font-weight: bolder;
-    text-decoration: none;
+    text-decoration: underline;
 
 }
 
