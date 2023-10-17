@@ -23,13 +23,18 @@ header {
     padding: 20px; /* Reduzi o padding para manter um espaçamento mais equilibrado */
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.479);
-    display: flex; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    max-width: 100px; /* Define o tamanho máximo desejado para a logo */
+    margin-right: 10px; /* Adiciona um espaço entre a logo e o título */
 }
 
 header h1 {
-    font-size: 2em; /* Tamanho da fonte original */
+    font-size: 1.5em; /* Tamanho da fonte original */
     margin: 0; /* Removi a margem superior para melhorar o alinhamento */
 }
 
@@ -53,7 +58,6 @@ main {
     line-height: 35px;
     margin-bottom: 20px;
     text-align: justify;
-    padding-top: 10px;
 
 }
 
@@ -96,7 +100,7 @@ main {
     
     text-align: center;
     color: #820BD1;
-    margin: 30px ;
+    margin: 0px ;
 }
 
 #bn {
@@ -105,8 +109,7 @@ main {
     justify-content: center;
     color: black;
     margin-bottom: 10px;
-    padding: 20px;
-    line-height: 30px;
+    padding: 20px 20px;
     text-align: justify;
     line-height: 27px;
     font-size: 19px;
