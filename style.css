@@ -65,15 +65,15 @@ main {
 .botao-pagamento {
     background-color: #820BD1;
     color: #fff;
-    padding: 20px 60px;
+    padding: 15px 40px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s ease;
     display: inline-block;
-    font-size: 25px;
+    font-size: 23px;
     line-height: 1;
-    width: auto; /* Largura automática (ajustada pelo conteúdo) */
+    width: auto; 
 }
 
 .botao-pagamento:hover {
