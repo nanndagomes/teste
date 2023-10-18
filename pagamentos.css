@@ -20,12 +20,14 @@ header {
     justify-content: center; /* Centraliza horizontalmente o conteúdo do header */
     align-items: center; 
     max-width: 100%; 
+    
 }
 
 header img {
     max-width: 150px; 
     height: auto;
     margin-right: 20px;
+    
 }
 
 label {
@@ -63,7 +65,7 @@ button[type="button"]:hover {
 
 
 header h1 {
-    font-size: 23px;
+    font-size: 21px;
     color: #fff;
     margin: 0;
     vertical-align: middle;
@@ -78,6 +80,7 @@ header h1 {
     margin: 0 auto;
     max-width: 100%;
     height: auto;
+    
     
 }
 
@@ -129,7 +132,12 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    font-size: 12px;
+    font-size: 10px;
+}
+
+#rdp {
+
+    font-size: 16px;
 }
 
 /* Estilo do resultado da dívida */
