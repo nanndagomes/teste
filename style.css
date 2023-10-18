@@ -16,11 +16,11 @@ body {
 
 header {
     margin: auto;
-    text-align: center;
+    text-align: left;
     background-color: #820BD1;
-    min-height: 150px;
+    min-height: 200px;
     max-width: 100%;
-    padding: 20px; 
+    padding: 10px; 
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.479);
     display: flex;
@@ -29,14 +29,16 @@ header {
 }
 
 header img {
-    max-width: 100px; 
+    width: 200px; /* Ajuste o valor conforme necessário para aumentar o tamanho da imagem */
     margin-right: 10px; 
+    max-width: 100%; /* Certifique-se de que a imagem não ultrapasse a largura do contêiner pai */
 }
 
 header h1 {
     font-size: 1.5em; 
     margin: 0; 
 }
+
 
 h1 {
     color: #ffffff;
@@ -125,7 +127,8 @@ main {
 }
 
 #beneficios {
-    
+
+    font-size: ;
     text-align: center;
     color: #820BD1;
     margin: 0px ;
@@ -136,15 +139,15 @@ main {
     
     justify-content: center;
     color: black;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     padding: 20px 20px;
-    text-align: justify;
-    line-height: 27px;
+    line-height: 20px;
     font-size: 19px;
+    text-align: center;
 }
 
 h3 {
-    margin: 30px;
+    margin: 10px;
 }
 
 #chance {
@@ -164,10 +167,11 @@ p {
 
 #titulo2 {
 
-text-align: center;
+   text-align: center;
    color: #820BD1;
-   margin: 20px;
-   font-size: 35px;
+   margin: 10px;
+   margin-bottom: 0px;
+   font-size: 32px;
 }
 
 #titulo3 {
@@ -175,7 +179,7 @@ text-align: center;
     text-align: center;
     margin-bottom: 30px;
     margin-top: 20px;
-    font-size: 27px;
+    font-size: 32px;
     color:#820BD1 ;
 }
 
@@ -186,8 +190,8 @@ ol {
     line-height: 27px;
     font-size: 19px;
     font-size: 19px;
-    margin-top: 30px;
-    padding: 35px;
+    margin-top: 7px;
+    padding: 25px;
     color: #000000;
 
 }
@@ -241,6 +245,6 @@ footer a {
 }
 
 footer a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: black;
 }

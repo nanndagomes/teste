@@ -37,6 +37,11 @@ main {
     background-color: #fff;
 }
 
+#principal {
+
+    font-size: 25px;
+}
+
 h1 {
 
     font-size: 25px;
@@ -45,7 +50,7 @@ h1 {
 
 h2 {
 
-    padding: 20px;
+    padding: 10px;
     font-size: 30px;
 }
 
@@ -59,8 +64,13 @@ p {
     font-size: 21px;
 }
 
-strong {
+#ttl {
     color: #820BD1;
+}
+
+strong {
+    font-size: 20px;
+    color: #080808;
 }
 
 ol {
@@ -72,7 +82,7 @@ ol {
 #rdp {
     font-size: 16px;
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
 }
 
 footer {
