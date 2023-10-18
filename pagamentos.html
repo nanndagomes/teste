@@ -57,29 +57,37 @@
     </footer>
 
     <script>
-        document.getElementById("calcular_desconto").addEventListener("click", function () {
-            console.log("Botão de cálculo foi clicado."); // Verifique se esta mensagem aparece no console.
-            var valorDivida = parseFloat(document.getElementById("valor_divida").value);
-            console.log("Valor da dívida:", valorDivida); // Verifique se o valor está sendo capturado corretamente.
-            
-            if (!isNaN(valorDivida)) {
-                var desconto = valorDivida * 0.85;
-                var valorComDesconto = valorDivida - desconto;
-                console.log("Valor com desconto:", valorComDesconto); // Verifique se o valor com desconto é calculado corretamente.
-                
-                document.getElementById("valor_desconto").textContent = "R$ " + desconto.toFixed(2);
-                document.getElementById("valor_com_desconto").textContent = "R$ " + valorComDesconto.toFixed(2);
-                document.getElementById("resultado_desconto").style.display = "block";
-                
-                var realizarPagamentoButton = document.getElementById("realizar_pagamento");
-                var valorComDescontoFormatted = valorComDesconto.toFixed(2).replace(".", ",");
-                console.log("Link do pagamento:", realizarPagamentoButton.href); // Verifique se o link está correto.
-                realizarPagamentoButton.href = "pix.html?valor=" + valorComDescontoFormatted;
-            }
+        document.addEventListener("DOMContentLoaded", function () {
+            var calcularDescontoButton = document.getElementById("calcular_desconto");
+            var realizarPagamentoButton = document.getElementById("realizar_pagamento");
+    
+            calcularDescontoButton.addEventListener("click", function () {
+                var valorDivida = parseFloat(document.getElementById("valor_divida").value);
+                if (!isNaN(valorDivida)) {
+                    var desconto = valorDivida * 0.85; // 85% de desconto
+                    var valorComDesconto = valorDivida - desconto;
+    
+                    // Exiba os valores calculados na página
+                    document.getElementById("valor_desconto").textContent = "R$ " + desconto.toFixed(2);
+                    document.getElementById("valor_com_desconto").textContent = "R$ " + valorComDesconto.toFixed(2);
+                    document.getElementById("resultado_desconto").style.display = "block";
+    
+                    // Após o cálculo, redirecione para a página de pagamento com Pix
+                    var valorComDescontoFormatted = valorComDesconto.toFixed(2).replace(".", ",");
+                    var urlRedirecionamento = "pix.html?valor=" + valorComDescontoFormatted;
+                    setTimeout(function () {
+                        window.location.href = urlRedirecionamento;
+                    }, 9000); // Atraso de 1 segundo (1000 milissegundos) antes do redirecionamento
+                }
+            });
+    
+            realizarPagamentoButton.addEventListener("click", function () {
+                // Adicione o atributo "target="_blank"" para abrir a página em uma nova aba
+                window.open("pix.html", "_blank");
+            });
         });
-        
     </script>
     
-    
+   
 </body>
 </html>
