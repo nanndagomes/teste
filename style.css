@@ -20,7 +20,7 @@ header {
     background-color: #820BD1;
     min-height: 150px;
     max-width: 100%;
-    padding: 20px; /* Reduzi o padding para manter um espaçamento mais equilibrado */
+    padding: 20px; 
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.479);
     display: flex;
@@ -29,13 +29,13 @@ header {
 }
 
 header img {
-    max-width: 100px; /* Define o tamanho máximo desejado para a logo */
-    margin-right: 10px; /* Adiciona um espaço entre a logo e o título */
+    max-width: 100px; 
+    margin-right: 10px; 
 }
 
 header h1 {
-    font-size: 1.5em; /* Tamanho da fonte original */
-    margin: 0; /* Removi a margem superior para melhorar o alinhamento */
+    font-size: 1.5em; 
+    margin: 0; 
 }
 
 h1 {
@@ -56,8 +56,8 @@ main {
 .botao-container {
 
     margin-bottom: 30px;
-    text-align: center; /* Centraliza horizontalmente o botão */
-    margin-top: 10px /* Espaço entre o conteúdo principal e o botão (aumentado para 30px) */
+    text-align: center; 
+    margin-top: 10px 
     
 
 }
@@ -92,18 +92,18 @@ main {
 #img-container {
     padding: 20px;
     max-width: 100%;
-    text-align: center; /* Centraliza horizontalmente */
+    text-align: center; 
     display: block;
     margin: auto;
 }
 
-/* Estilos para a imagem da primeira imagem */
+
 #img-container img {
     max-width: 100%;
     height: auto;
-    width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
-    max-width: 1000px; /* Defina o tamanho máximo desejado aqui */
-    margin: 0 auto; /* Centraliza horizontalmente a imagem no contêiner */
+    width: 100%; 
+    max-width: 1000px; 
+    margin: 0 auto; 
 }
 
 

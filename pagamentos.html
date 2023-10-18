@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pagamentos.css">
+    <link rel="shortcut icon" href="nubank-new-20211454.jpg" type="image/x-icon">
+    <title>Calculadora de Desconto - Nubank</title>
+</head>
+<body>
+    <header>
+        <img src="download-removebg-preview.png" id="" alt="Sua Logo">
+        <h1>Nubank, Oportunidade que Você Esperava!</h1>
+        
+        
+    </header>
+
+    <main>
+
+        <h2 id="titulo1">Calculadora de Desconto</h2>
+
+        <img src="imagem-destaque-emprestimo-pessoal-nubank-mobills.png" id="img1" alt="Sua Imagem" />
+
+        <section class="calculadora">
+            <h2>Insira seus Dados</h2>
+            <form id="calculadora-form">
+                <label for="nome_completo">Nome Completo:</label>
+                <input type="text" id="nome_completo" name="nome_completo" required>
+                <br> <!-- Quebra de linha para separar os campos -->
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+                 <br>
+                <label for="valor_divida"><strong>Valor da Dívida</strong>:</label>
+                <input type="text" id="valor_divida" name="valor_divida" required>
+        
+                <button type="button" id="calcular_desconto">Calcular Desconto</button>
+            </form>
+        </section>
+        
+        
+        <div class="espaco-vertical"></div> <!-- Espaço vertical adicionado -->
+        
+        <div id="resultado_desconto" style="display: none;">
+            <strong>Com 85% de desconto, você economiza:</strong>
+            <p><span id="valor_desconto">R$ 0,00</span></p>
+            <p>Valor a ser pago:</p>
+            <p><span id="valor_com_desconto">R$ 0,00</span></p>
+            <button type="button" id="realizar_pagamento">Realizar Pagamento</button>
+        </div>
+        
+        <p id="att"><strong>Atenção!</strong> Lembre-se de adicionar o valor correto da dívida. Caso contrário, o acordo não será feito até o pagamento total ser efetuado, o restante pendente será cobrado por e-mail, via boleto.</p>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Nunbank - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        document.getElementById("calcular_desconto").addEventListener("click", function () {
+            var valorDivida = parseFloat(document.getElementById("valor_divida").value);
+            if (!isNaN(valorDivida)) {
+                var desconto = valorDivida * 0.85; // 85% de desconto
+                var valorComDesconto = valorDivida - desconto;
+                
+                document.getElementById("valor_desconto").textContent = "R$ " + desconto.toFixed(2);
+                document.getElementById("valor_com_desconto").textContent = "R$ " + valorComDesconto.toFixed(2);
+                document.getElementById("resultado_desconto").style.display = "block";
+            }
+        });
+
+        document.getElementById("realizar_pagamento").addEventListener("click", function () {
+            // Redirecionar para a página de pagamento com o valor calculado
+            var valorComDesconto = parseFloat(document.getElementById("valor_com_desconto").textContent.replace("R$ ", ""));
+            if (!isNaN(valorComDesconto)) {
+                window.location.href = "pagina_de_pagamento.html?valor=" + valorComDesconto;
+            }
+        });
+    </script>
+</body>
+</html>
