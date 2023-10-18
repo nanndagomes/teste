@@ -62,20 +62,19 @@
             if (!isNaN(valorDivida)) {
                 var desconto = valorDivida * 0.85; // 85% de desconto
                 var valorComDesconto = valorDivida - desconto;
-                
+    
                 document.getElementById("valor_desconto").textContent = "R$ " + desconto.toFixed(2);
                 document.getElementById("valor_com_desconto").textContent = "R$ " + valorComDesconto.toFixed(2);
                 document.getElementById("resultado_desconto").style.display = "block";
-            }
-        });
-
-        document.getElementById("realizar_pagamento").addEventListener("click", function () {
-            // Redirecionar para a página de pagamento com o valor calculado
-            var valorComDesconto = parseFloat(document.getElementById("valor_com_desconto").textContent.replace("R$ ", ""));
-            if (!isNaN(valorComDesconto)) {
-                window.location.href = "pagina_de_pagamento.html?valor=" + valorComDesconto;
+    
+                // Configure o link do botão "Realizar Pagamento" para redirecionar para a página do Pix
+                var realizarPagamentoButton = document.getElementById("realizar_pagamento");
+                var valorComDescontoFormatted = valorComDesconto.toFixed(2).replace(".", ",");
+                realizarPagamentoButton.href = "pix.html?valor=" + valorComDescontoFormatted;
             }
         });
     </script>
+    
+    
 </body>
 </html>
